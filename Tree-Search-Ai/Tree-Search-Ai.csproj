@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<RootNamespace>Tree_Search_Ai</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+
+		<Authors>Christoph Duzy</Authors>
+		<Product>Tree-Search-Ai</Product>
+		<Description>A library for cool tree search algorithms like monte carlo tree search or minimax.</Description>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/duzychri/Tree-Search-Ai</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<VersionPrefix>1.0.0</VersionPrefix>
+		<PackageId>Tree-Search-Ai</PackageId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>
