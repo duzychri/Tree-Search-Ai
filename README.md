@@ -1,4 +1,4 @@
-# Simple-Neural-Network
+# Tree-Search-Ai
 
 A library for cool tree search algorithms like monte carlo tree search or minimax.
 

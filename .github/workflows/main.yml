@@ -28,8 +28,8 @@ jobs:
           
       - name: Build solution and generate NuGet package
         run: |  
-          cd "TreeSearchAi"
+          cd "Tree-Search-Ai"
           dotnet pack -c Release -o out  
 
       - name: Push generated package to GitHub registry
-        run: dotnet nuget push "./TreeSearchAi/out/*.nupkg" --skip-duplicate --no-symbols --api-key ${{secrets.GITHUB_TOKEN}}
+        run: dotnet nuget push "./Tree-Search-Ai/out/*.nupkg" --skip-duplicate --no-symbols --api-key ${{secrets.GITHUB_TOKEN}}
