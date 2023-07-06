@@ -25,7 +25,7 @@
         /// <summary>
         /// The constant that the exploration term in the UCB formula is multiplied by.
         /// </summary>
-        public float ExplorationConfidence { get; init; } = 1;
+        public float ExplorationConfidence { get; init; } = 1.4f;
         /// <summary>
         /// The score that is used to determine the best child node and is propagated up the tree.
         /// </summary>

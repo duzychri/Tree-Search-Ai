@@ -20,14 +20,15 @@ namespace TicTacToe.App
             // Initialize game engine and ai.
             var aiSettings = new MonteCarloTreeSearcherSettings<BoardState, GameAction>()
             {
+                ExplorationConfidence = 25,
                 CalculateScore = (outcome) =>
                 {
-                    float score = 0f;
                     if (outcome.TerminatingPlayer == Player.O)
-                    { score = 1f; }
+                    { return 1f; }
                     else if (outcome.IsTerminated && outcome.TerminatingPlayer == Player.None)
-                    { score = 1f; }
-                    return score;
+                    { return 1f; }
+                    else
+                    { return 0f; }
                 }
             };
             gameAi = new MonteCarloTreeSearcher<BoardState, GameAction>(aiSettings);

@@ -10,7 +10,7 @@ namespace MonteCarloTreeSearch
         /// <summary>
         /// A node for a Monte Carlo Tree Search.
         /// </summary>
-        [DebuggerDisplay("Visits = {Visits}, Score = {Score}, Action = {Action}")]
+        [DebuggerDisplay("Action = {Action}, Visits = {Visits}, Score = {Score}, ExploitationScore = {ExploitationScore}")]
         private class TreeNode : ITreeNode<TreeNode>
         {
             #region ITreeNode Properties
@@ -62,6 +62,11 @@ namespace MonteCarloTreeSearch
             /// The depth of this node in the tree.
             /// </summary>
             public int Depth => Parent?.Depth + 1 ?? 0;
+
+            /// <summary>
+            /// The current estimated value of the node.
+            /// </summary>
+            public float ExploitationScore => Score / Visits;
 
             /// <summary>
             /// Returns all parents of this node.

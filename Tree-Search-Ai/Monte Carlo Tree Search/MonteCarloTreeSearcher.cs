@@ -117,11 +117,11 @@ namespace MonteCarloTreeSearch
         /// </summary>
         private void PropagateOutcome(TreeNode node, GameState outcome)
         {
+            float score = settings.CalculateScore(outcome);
+
             TreeNode? currentNode = node;
             while (currentNode != null)
             {
-                float score = settings.CalculateScore(outcome);
-
                 currentNode.Visits++;
                 currentNode.Score += score;
                 currentNode = currentNode.Parent;
